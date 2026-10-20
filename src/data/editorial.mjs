@@ -1,7 +1,7 @@
 // 首页和项目介绍的编辑内容。GitHub 同步不会覆盖这些文字。
 export const editorial = {
-  PuppetLoom: { category: 'apps', description: '让画里的角色动起来。从分层 PSD 到可编辑、可校准的 2D 动态角色。', tags: ['2D 角色', '动画创作'], featured: true, image: 'puppetloom.png', color: 'lavender' },
-  'MediaFlow-Pro': { category: 'apps', description: '把素材、字幕、剪辑与多轨时间线放在一起的本地视频创作工作站。', tags: ['视频创作', '桌面应用'], featured: true, image: 'mediaflow.png', color: 'peach' },
+  PuppetLoom: { category: 'apps', description: '让画里的角色动起来。从分层 PSD 到可编辑、可校准的 2D 动态角色。', tags: ['2D 角色', '动画创作'], featured: true, image: 'puppetloom.webp', color: 'lavender' },
+  'MediaFlow-Pro': { category: 'apps', description: '把素材、字幕、剪辑与多轨时间线放在一起的本地视频创作工作站。', tags: ['视频创作', '桌面应用'], featured: true, image: 'mediaflow.webp', color: 'peach' },
   Glean: { category: 'apps', description: '从信息洪流中找到值得读的内容。采集、筛选、追踪，再发布到自己的频道。', tags: ['信息筛选', '阅读'], color: 'sage' },
   Heimdall: { category: 'apps', description: '把行情、图表、市场研究和投资组合分析放进一个本地工作台。', tags: ['市场研究', '投资工具'], color: 'blue' },
   VoxWeave: { category: 'apps', description: '在本地完成高质量离线 RVC 变声，让声音创作更自由。', tags: ['声音创作', '离线运行'], color: 'peach' },

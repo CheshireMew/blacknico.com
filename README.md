@@ -31,6 +31,7 @@ npm run dev
 - `src/data/github.json`：GitHub 公开仓库资料。
 - `src/data/article-links.json`：核对过的真实文章链接。
 - `src/render.mjs`：页面结构。
+- `src/seo.mjs`：各页 SEO 信息、结构化数据与自动生成的站点地图。
 - `public/styles.css`：样式与手机布局。
 - `public/app.js`：筛选、搜索、主题与复制操作。
 - `public/images/`：头像、项目原始封面与截图、SVG 插画。
@@ -55,3 +56,5 @@ npm run build
 `scripts/qa-browser.mjs` 是本机浏览器检查入口，默认使用 D 盘现有 Playwright 与系统 Chrome，不需要下载浏览器。检查截图和报告写到 `D:\Tools\blacknico-site-qa`；可通过 `PLAYWRIGHT_PATH`、`QA_DIR`、`BASE_URL` 改变位置。
 
 资料核对范围与说明见 `docs/content-sources.md`。
+
+专项优化与 Search Console 地图提交状态见 [SEO 说明](docs/seo.md)。正式地图为 <https://blacknico.com/sitemap.xml>。

@@ -2,6 +2,7 @@ import http from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderSitemap } from '../src/seo.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const publicRoot = resolve(root, 'public');
@@ -14,8 +15,18 @@ const server = http.createServer(async (request, response) => {
     const path = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
     if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405, { Allow: 'GET, HEAD' }); response.end(); return; }
     const normalized = path.replace(/\/index\.html$/, '/');
+    if (path === '/sitemap.xml') {
+      response.writeHead(200, { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'no-store' });
+      response.end(request.method === 'HEAD' ? undefined : renderSitemap());
+      return;
+    }
+    if (normalized !== path) {
+      response.writeHead(301, { Location: normalized + new URL(request.url, 'http://localhost').search });
+      response.end();
+      return;
+    }
     const route = { '/': 'home', '/projects/': 'projects', '/invite/': 'invite', '/404.html': '404' }[normalized];
-    if (['/projects', '/invite'].includes(path)) { response.writeHead(302, { Location: path + '/' }); response.end(); return; }
+    if (['/projects', '/invite'].includes(path)) { response.writeHead(301, { Location: path + '/' + new URL(request.url, 'http://localhost').search }); response.end(); return; }
     if (route) {
       // 修改渲染模板后刷新页面即可；数据与图标模块修改后重启服务。
       const templatePath = resolve(root, 'src/render.mjs');
