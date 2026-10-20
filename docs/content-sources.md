@@ -37,4 +37,4 @@ PuppetLoom 封面和 MediaFlow Pro 工作区截图取自各自公开仓库，头
 
 [OKX Wallet 2026 年 4 月的规则公告](https://web3.okx.com/help/updates-to-okx-wallet-referral-rules)说明邀请方可以设置被邀请人服务费折扣，不同代币可能有不同的总返佣上限。网站据此区分了平台服务费优惠与链上网络 Gas 费。
 
-当前没有注册、登录、交易、发送邀请消息、修改 DNS 或上线部署。
+网站已于 2026 年 10 月 20 日部署到 blacknico.com，替换原主站界面；部署记录见 `deployment.md`。本次没有执行交易所注册、登录、交易、发送邀请消息或修改 DNS。

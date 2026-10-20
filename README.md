@@ -48,7 +48,9 @@ npm run build
 
 `check` 核对页面、素材、项目资料、真实文章地址、邀请链接及邀请码。`build` 将三个页面、404 页和静态资源写入 `dist/`，不生成压缩包。
 
-部署时将 `dist/` 的内容交给现有静态网站服务。各路径对应独立的 `index.html`，无需数据库、Node 常驻服务或页面路由回退。新页面已提供 canonical、站点地图、robots、分享图及结构化个人资料。当前工作仅在本地，未修改公网网站或域名。
+部署时将 `dist/` 的内容交给现有静态网站服务。各路径对应独立的 `index.html`，无需数据库、Node 常驻服务或页面路由回退。新页面已提供 canonical、站点地图、robots、分享图及结构化个人资料。
+
+网站已于 2026 年 10 月 20 日部署到 <https://blacknico.com/>，替换原首页。生产目录、版本、备份与恢复方式见 [部署记录](docs/deployment.md)。
 
 `scripts/qa-browser.mjs` 是本机浏览器检查入口，默认使用 D 盘现有 Playwright 与系统 Chrome，不需要下载浏览器。检查截图和报告写到 `D:\Tools\blacknico-site-qa`；可通过 `PLAYWRIGHT_PATH`、`QA_DIR`、`BASE_URL` 改变位置。
 
