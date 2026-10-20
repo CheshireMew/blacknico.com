@@ -1,0 +1,15 @@
+{
+  "name": "blacknico.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BlackNico 的个人主站、项目作品集与邀请福利页",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "sync:github": "node scripts/sync-github.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
