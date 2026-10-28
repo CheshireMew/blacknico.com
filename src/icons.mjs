@@ -18,6 +18,7 @@ const paths = {
   copy: '<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/>',
   check: '<path d="m5 12 4 4L19 6"/>',
   menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+  close: '<path d="m6 6 12 12M6 18 18 6"/>',
   spark: '<path d="m12 2 2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7Z"/>',
   binance: '<path fill="currentColor" stroke="none" d="m12 1 4.2 4.2-2.5 2.5L12 6l-1.7 1.7-2.5-2.5ZM1 12l4.2-4.2 2.5 2.5L6 12l1.7 1.7-2.5 2.5Zm22 0-4.2 4.2-2.5-2.5L18 12l-1.7-1.7 2.5-2.5ZM12 23l-4.2-4.2 2.5-2.5L12 18l1.7-1.7 2.5 2.5Zm0-15 4 4-4 4-4-4Z"/>',
   okx: '<path fill="currentColor" stroke="none" d="M2 2h6v6H2zm14 0h6v6h-6zM9 9h6v6H9zM2 16h6v6H2zm14 0h6v6h-6z"/>'

@@ -1,6 +1,6 @@
 # blacknico.com
 
-柴郡的个人主站。首版采用暖白、炭黑和橙色，配有原创 SVG 黑猫插画，包含网站入口、项目作品集、文章与独立邀请页。
+柴郡的个人主站。采用暖白、炭黑和橙色，包含网站入口、项目作品集、文章与独立邀请页。首页使用紧凑的文字介绍，优先展示网站与真实作品。
 
 ## 本地预览
 
@@ -22,7 +22,7 @@ npm run dev
 | `/projects/` | 39 个公开项目，支持分类、搜索与直接链接到筛选结果 |
 | `/invite/` | 两家交易所及两个 Web3 钱包的邀请链接、五个邀请码 |
 
-页面支持手机导航、浅色/深色主题、键盘操作及减少动态效果的系统偏好。邀请码可一键复制，复制失败时会提示手动复制。
+页面支持手机导航、跟随系统及手动选择的浅色/深色主题、键盘操作及减少动态效果的系统偏好。项目搜索支持 `/` 聚焦、`Esc` 清空和 URL 恢复。邀请码可一键复制，复制失败时会选中对应代码并提示手动复制。关闭 JavaScript 后，导航、项目和邀请链接仍可使用。
 
 ## 修改内容
 
@@ -35,6 +35,7 @@ npm run dev
 - `public/styles.css`：样式与手机布局。
 - `public/app.js`：筛选、搜索、主题与复制操作。
 - `public/images/`：头像、项目原始封面与截图、SVG 插画。
+- `public/fonts/`：本地托管的 Manrope 拉丁可变字体、中文标题字形子集及对应的 SIL Open Font License。标题新增字形时会使用系统中文字体回退；页面不请求外部字体服务。
 
 修改样式、前端脚本或渲染模板后刷新浏览器。修改数据文件与图标后需要重启预览服务。
 
@@ -53,8 +54,10 @@ npm run build
 
 网站已于 2026 年 10 月 20 日部署到 <https://blacknico.com/>，替换原首页。生产目录、版本、备份与恢复方式见 [部署记录](docs/deployment.md)。
 
-`scripts/qa-browser.mjs` 是本机浏览器检查入口，默认使用 D 盘现有 Playwright 与系统 Chrome，不需要下载浏览器。检查截图和报告写到 `D:\Tools\blacknico-site-qa`；可通过 `PLAYWRIGHT_PATH`、`QA_DIR`、`BASE_URL` 改变位置。
+`node scripts/qa-browser.mjs` 是本机浏览器检查入口，默认使用 D 盘现有 Playwright 与系统 Chrome，不需要下载浏览器。检查三个页面在 320–1440 像素的八种宽度、筛选搜索、剪贴板与复制失败、键盘导航、系统主题、存储受限和禁用 JavaScript 的情况。截图和报告写到 `D:\Tools\blacknico-site-qa`；可通过 `PLAYWRIGHT_PATH`、`QA_DIR`、`BASE_URL` 改变位置。
 
 资料核对范围与说明见 `docs/content-sources.md`。
 
 专项优化与 Search Console 地图提交状态见 [SEO 说明](docs/seo.md)。正式地图为 <https://blacknico.com/sitemap.xml>。
+
+2026 年 10 月的界面精修及本地验证范围见 [界面优化记录](docs/ui-refinement.md)。GitHub 同步与生产服务器部署是独立步骤。
