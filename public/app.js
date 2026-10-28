@@ -14,19 +14,26 @@ themeButton?.addEventListener('click', () => {
 });
 
 const mobileMenu = $('.mobile-menu');
+const siteHeader = $('#site-header');
 mobileMenu?.addEventListener('click', () => {
-  const open = $('#sidebar').classList.toggle('open');
+  const open = siteHeader.classList.toggle('open');
   mobileMenu.setAttribute('aria-expanded', String(open));
   mobileMenu.setAttribute('aria-label', open ? '关闭导航' : '打开导航');
 });
 function closeMenu() {
-  $('#sidebar').classList.remove('open');
+  siteHeader?.classList.remove('open');
   mobileMenu?.setAttribute('aria-expanded', 'false');
   mobileMenu?.setAttribute('aria-label', '打开导航');
 }
 $$('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
-document.addEventListener('click', event => { if (!event.target.closest('.sidebar')) closeMenu(); });
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && siteHeader?.classList.contains('open')) {
+    closeMenu();
+    mobileMenu?.focus();
+  }
+});
+window.matchMedia('(max-width: 900px)').addEventListener('change', closeMenu);
 
 if (document.body.dataset.page === 'home') {
   const sections = [$('#sites'), $('#writing')].filter(Boolean);

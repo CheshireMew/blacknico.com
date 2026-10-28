@@ -4,17 +4,17 @@ import { site } from './data/site.mjs';
 // lastModified 只在页面内容实际更新时修改，不使用每次构建的时间。
 export const pages = {
   home: {
-    path: '/', label: '首页', lastModified: '2026-10-20',
+    path: '/', label: '首页', lastModified: '2026-10-22',
     title: 'BlackNico 柴郡｜AI 工具、开源项目与创作记录',
     description: '柴郡 Cheshire 的个人主站 BlackNico。探索 AI 工具、开源软件、Agent Skills、内容创作与投资研究，浏览我的项目作品、博客、Web3 学习站及其他网站。'
   },
   projects: {
-    path: '/projects/', label: '项目与作品', lastModified: '2026-10-20',
+    path: '/projects/', label: '项目与作品', lastModified: '2026-10-22',
     title: '开源项目与 Agent Skills｜BlackNico 柴郡',
     description: '浏览柴郡 CheshireMew 的开源项目与 Agent Skills：PuppetLoom 2D 角色动画、MediaFlow Pro 视频创作、Glean 信息筛选，以及笔记、翻译、写作和市场研究工具，附 GitHub 源码与网站入口。'
   },
   invite: {
-    path: '/invite/', label: '邀请福利', lastModified: '2026-10-20',
+    path: '/invite/', label: '邀请福利', lastModified: '2026-10-22',
     title: '币安、OKX 邀请码与 Web3 钱包手续费优惠｜BlackNico',
     description: '柴郡的币安 Binance、欧易 OKX 注册邀请及 Web3 钱包邀请码汇总。交易所展示 20% 手续费优惠，OKX 钱包 20%、币安钱包 30%；支持复制邀请码，具体权益以平台显示为准。'
   }
